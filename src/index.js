@@ -11,17 +11,17 @@ const reExpr = /\(([^()]+)\)/;
 let simpleCalc = (a, b, c) => {
     switch (b) {
         case '+':
-            return String(Number(a) + Number(c));
+            return (Number(a) + Number(c)).toFixed(20);
         case '-':
-            return String(Number(a) - Number(c));
+            return (Number(a) - Number(c)).toFixed(20);
         case '*':
-            return String(Number(a) * Number(c));
+            return (a * c).toFixed(20);
         case '/':
             if (c === '0') {
                 return 'TypeError: Division by zero'
             }
             else {
-                return (Math.round(a / c *1000000)/1000000);
+                return (a / c).toFixed(20);
             }
     }
 }
