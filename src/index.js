@@ -21,7 +21,7 @@ let simpleCalc = (a, b, c) => {
                 return 'TypeError: Division by zero'
             }
             else {
-                return a / c;
+                return (Math.round(a / c *1000000)/1000000);
             }
     }
 }
@@ -92,4 +92,4 @@ module.exports = {
     expressionCalculator
 }
 
-console.log(expressionCalculator(" (  96 / 83 - 53 - (  59 - 91 / 91 - 54  )  ) / (  75 + 4 / (  50 - 80 * 45 + 93 + 18  ) - 76 / 54  ) * 14 + 59 "))
+console.log(expressionCalculator(" 24 - 23 * 17 / (  93 + 52 * 70 * (  6 + 91 / (  (  4 / 39 / 8 * 30  ) / (  22 * 97 * (  32 * 20 * (  82 - 80 * 51 / 89 * 9  ) * 56 + 82  ) * 89  ) - 17 - 17  ) / 29 / 81  )  ) "))
